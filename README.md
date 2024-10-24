@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+**EzyMetrics - Lead Management Dashboard**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+EzyMetrics is a lead management dashboard designed to provide insights into lead generation, performance, and reporting. This project features a clean and responsive user interface, offering users easy access to various sections such as Dashboard, Leads, Analytics, and Reports.
 
-In the project directory, you can run:
+The application is built using React.js with Bootstrap for styling and responsiveness, and Chart.js for data visualization.
 
-### `npm start`
+**Features**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Dashboard: Displays key metrics such as total leads, monthly performance, and lead source distribution.
+Leads: Manage and view detailed information about leads.
+Analytics: Visual representation of lead data using pie charts (for source distribution) and bar charts (for monthly performance).
+Reports: Generate PDF reports that include lead data and performance visualizations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+**Tech Stack**
+```
+React.js
+Bootstrap 5
+Chart.js (for charts)
+react-chartjs-2 (wrapper for Chart.js in React)
+jsPDF (for report generation)
+Bootstrap Icons
+```
+Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to get the project up and running on your local machine.
 
-### `npm run build`
+Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Make sure you have the following installed on your machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Node.js (v14.x or later)
+npm (comes with Node.js) or Yarn as a package manager
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Installation
 
-### `npm run eject`
+**Clone the Repository**
+```
+git clone https://github.com/Ajaypaluri/lead-management-dashboard.git
+cd lead-management-dashboard
+```
+Install Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run the following command to install the necessary dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
+Or if you prefer Yarn:
+```
+yarn install
+```
+Install Chart.js, react-chartjs-2, and jsPDF
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Since this project uses Chart.js for charts and jsPDF for generating PDF reports, make sure to install these dependencies:
+```
+npm install chart.js react-chartjs-2 jspdf jspdf-autotable
+```
+Or with Yarn:
+```
+yarn add chart.js react-chartjs-2 jspdf jspdf-autotable
+```
+Run the Project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To start the development server, run:
+```
+npm start
+```
+Or with Yarn:
+```
+yarn start
+```
+This will open the app in your default browser at http://localhost:3000.
 
-## Learn More
+Build the Project (for production)
+To create an optimized production build, run:
+```
+npm run build
+```
+**Usage**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Sidebar: Use the sidebar to navigate between different sections (Dashboard, Leads, Analytics, Reports).
+Charts: Visualize data with pie and bar charts in the Analytics section.
+Report Generation: Head to the Reports section to generate and download PDF reports of lead data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Folder Structure**
+```
+lead-management-dashboard/
+├── public/                 # Public folder for assets
+│   └── UI.png              # Logo image
+├── src/                    # Main source folder
+│   ├── Components/         # Contains all React components
+│   │   ├── Dashboard.js    # Dashboard component
+│   │   ├── Leads.js        # Leads component
+│   │   ├── Analytics.js    # Analytics component
+│   │   ├── Reports.js      # Reports component
+│   │   ├── Sidebar.js      # Sidebar component
+│   │   └── Header.js       # Header component
+│   ├── App.js              # Main App file
+│   └── index.js            # Entry point for React
+└── package.json            # Project configuration and dependencies
+```
 
-### Code Splitting
+**Customization**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Charts: Charts in the Analytics section are powered by Chart.js. You can easily modify the datasets or configuration in the Analytics.js component.
+Reports: Reports are generated using jsPDF in the Reports.js component. The data and layout can be adjusted based on your needs.
 
-### Analyzing the Bundle Size
+**Credits**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project was developed collaboratively, bringing together front-end technologies and data visualization tools to create a smooth and functional user experience.
 
-### Making a Progressive Web App
+**Dependencies to Install**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Here are the key dependencies you need to install to make the project work:
+```
+react-chartjs-2: For rendering charts in React.
+Chart.js: The charting library for creating pie and bar charts.
+jsPDF: For generating PDF reports.
+jspdf-autotable: For creating tables inside the generated PDF.
+```
